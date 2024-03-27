@@ -20,7 +20,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 millie devlog
+title:                 밀리 devlog
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -49,14 +49,14 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             daily
+  - title:             about me
     url:               /about/
   - title:             blog
     url:               /example/
   - title:             project
     url:               /docs/
-  - title:             fortpolio
-    url:               /about/
+  - title:             daily
+    url:               /example/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
