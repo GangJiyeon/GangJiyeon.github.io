@@ -49,13 +49,13 @@ author:
 
 # Add links to the sidebar.
 menu:
+  - title:             daily
+    url:               /about/
   - title:             blog
     url:               /example/
   - title:             project
     url:               /docs/
   - title:             fortpolio
-    url:               /about/
-  - title:             daily
     url:               /about/
 
 # Add links to the footer.
