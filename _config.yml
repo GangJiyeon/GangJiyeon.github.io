@@ -53,16 +53,10 @@ menu:
     url:               /about/
   - title:             blog
     url:               /example/
-    - title:           dev
-      url:             /dev
-    - title:           DS
-      url:             /ds
-    - title:           CS
-      url:             /cs            
   - title:             project
     url:               /docs/
-  - title:             daily
-    url:               /example/
+  - title:             fortpolio
+    url:               /about/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
