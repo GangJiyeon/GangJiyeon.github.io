@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "포스팅 테스트"
 date:   2024-03-27 14:14:38 +0900
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+깃허브 블로그 잘 모르겠지만 예쁘다
 
 Jekyll requires blog post files to be named according to the following format:
 
