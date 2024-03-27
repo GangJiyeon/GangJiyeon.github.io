@@ -53,6 +53,12 @@ menu:
     url:               /about/
   - title:             blog
     url:               /example/
+    - title:           dev
+      url:             /dev
+    - title:           DS
+      url:             /ds
+    - title:           CS
+      url:             /cs            
   - title:             project
     url:               /docs/
   - title:             daily
