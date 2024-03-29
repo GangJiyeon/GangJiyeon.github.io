@@ -39,7 +39,7 @@ redirect_from:
 <div class="grid_4">
   <a href="https://gangjiyeon.github.io/dev/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
+    <span>develop</span>  
   </a> 
   <a href="http://127.0.0.1:4000/dev/">  
     <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
