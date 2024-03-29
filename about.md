@@ -27,10 +27,16 @@ redirect_from:
 <div class="grid_3">  
   <a href="http://127.0.0.1:4000/dev/">  
     <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>안녕 인기글이 될 첫번째 글이야</p>  
+    <span>안녕 인기글이 될 첫번째 글이야</span>  
   </a>
-  <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >  
-  <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+  <a href="http://127.0.0.1:4000/dev/">  
+    <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+    <span>안녕 인기글이 될 첫번째 글이야</span>  
+  </a>
+  <a href="http://127.0.0.1:4000/dev/">  
+    <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+    <span>안녕 인기글이 될 첫번째 글이야</span>  
+  </a>
 </div>
 
 
@@ -41,30 +47,22 @@ redirect_from:
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
     <span>develop</span>  
   </a> 
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
+  <a href="https://gangjiyeon.github.io/dev/">  
+    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
+    <span>develop</span>  
   </a>
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
-  </a>
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
-  </a>
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
-  </a>
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
-  </a>
-  <a href="http://127.0.0.1:4000/dev/">  
-    <img class="circle_s" src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
-    <p>develop</p>  
-  </a>
+  <a href="https://gangjiyeon.github.io/dev/">  
+    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
+    <span>develop</span>  
+  </a> 
+  <a href="https://gangjiyeon.github.io/dev/">  
+    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
+    <span>develop</span>  
+  </a> 
+  <a href="https://gangjiyeon.github.io/dev/">  
+    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
+    <span>develop</span>  
+  </a>  
 </div>
 
 <!--posts-->
