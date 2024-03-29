@@ -26,15 +26,15 @@ redirect_from:
 
 <div class="grid_3">  
   <a href="http://127.0.0.1:4000/dev/">  
-    <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+    <img src="/assets/img/bgbg.jpg" align="center" >
     <span>안녕 인기글이 될 첫번째 글이야</span>  
   </a>
   <a href="http://127.0.0.1:4000/dev/">  
-    <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+    <img src="/assets/img/bgbg.jpg" align="center" >
     <span>안녕 인기글이 될 첫번째 글이야</span>  
   </a>
   <a href="http://127.0.0.1:4000/dev/">  
-    <img src="http://localhost:4000/assets/img/bgbg.jpg" align="center" >
+    <img src="/assets/img/bgbg.jpg" align="center" >
     <span>안녕 인기글이 될 첫번째 글이야</span>  
   </a>
 </div>
