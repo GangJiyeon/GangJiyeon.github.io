@@ -12,4 +12,96 @@
     margin: 1rem 0;
   }
 }
+.sidebar-sticky {
+  height: 100%;
+  padding-top: 10%;
+  position: absolute;
+  width: 300px;
+}
+.sidebar-about {
+  padding-bottom:10%;
+}
+.spread-btn{
+  left: 7%;
+  position: absolute;
+  padding: 0;
+  padding-top: 5px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
 
+.spread-btn:hover{
+  color: grey;
+}
+
+.menu-wrapper{
+  display: flex;
+  text-align: left;
+  margin-left: 10%;
+  margin-bottom: 0%;
+  
+  input[type=checkbox]{
+    display: none;
+  }
+  
+  input[type=checkbox] ~ ul{
+    display: none;
+    list-style: none;
+  }
+  
+  input[type=checkbox]:checked ~ ul{
+    display: block;
+  }
+}
+
+
+@font-face {
+  font-family: 'RegularFont';
+  font-weight: 400;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf') format("truetype");
+  font-display: swap;
+}
+
+
+a::after{
+  display: none;
+}
+
+.grid_4{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+.grid_3{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  
+}
+.grid_3 > a, .grid_4 > a{
+  text-decoration: none;
+}
+.grid_3 > a > img{
+  border-radius: 10px 10px 0px 0px;
+}
+.circle_s{
+  border-radius: 150px;
+  width: 90px !important;
+  height: 90px !important;
+}
+.grid_4 > a{
+  border: solid 1px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+}
+.grid_4 > a > p{
+  margin: 5px 0px 0px 0px !important;
+}
