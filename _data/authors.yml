@@ -8,10 +8,12 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    안녕하세요! 책 읽기를 좋아하는 **개발자** 강지연입니다.   
+    안녕하세요! 책 읽기를 좋아하는 **개발자** 강지연(millie)입니다.   
+    현재 데이터 분석, 웹 아키텍처에 관심이 많습니다. 😊    
     쉬는 날엔 주로 책을 읽거나 게임개발, 블로깅, 운동을 합니다!   
-    **millie**라는 영어이름을 가지고 있습니다^^
-    
+
+    > 저에 대해 자세히 알고 싶으시다면 👉 [portfolio](/public/CV.pdf), [resume](/public/CV.pdf), [cv](/public/CV.pdf) 를 확인해주세요.
+
 
   # This photo will be used in the about section
   picture:
@@ -79,3 +81,4 @@ author2:
   picture:           https://placehold.it/128x128
   twitter:           <username>
   github:            <username>
+

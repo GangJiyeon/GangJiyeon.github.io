@@ -9,21 +9,28 @@ redirect_from:
   - /download/
 ---
 
-# ABOUT
+# ABOUT ME
 
 ## about me
 <!--author-->
-> 저에 대해 자세히 알고 싶으시다면 👉 [portfolio], [resume], [cv] 를 확인해주세요.
+<div class="me">
+    <div><img src= "/assets/img/bgbg.jpg"></div>
+    <div><img src= "/assets/img/bgbg.jpg"></div>
 
+</div>
 
+<script>
+  $(document).ready(function(){
+    $('.me').slick();
+  });
+</script>
 
-## about website
-프로그래밍, 데이터 사이언스, 일상 회고를 위한 웹사이트입니다.   
-주로 공부하면서 알게 된 개발지식을 업로드합니다.😊
-
-### popular posting
-**millog**의 인기글을 확인해보세요!
-
+## sns
+---
+* [깃허브 블로그](/public/CV.pdf)와 [인스타그램](/public/CV.pdf)에서 개발 정보를 공유하고 있습니다. 
+* 백준, codeleet
+* 플러그인을 제작해 배포하였습니다.
+* 개인 웹사이트/앱을 운영 중입니다. 
 <div class="grid_3">  
   <a href="http://127.0.0.1:4000/dev/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
@@ -38,34 +45,27 @@ redirect_from:
     <span>안녕 인기글이 될 첫번째 글이야</span>  
   </a>
 </div>
+  
+
+## education
+---
+* 부산대학교 식물생명과학과 중퇴 [2021]
+* mega it 웹개발 취업반 과정 수료 [2022]
+* 경북대학교 글로벌소프트웨어 학과, 생명공학과 복수전공 [2027]
+
+## work
+* 웹개발 에이전시 adfun 백엔드 개발자 근무 [2022.10 - 2023.06]   
+> - node.js -> python flask 관리자 페이지 제작   
+> - 패밀리원 결제 api 유지보수[php], 패밀리원 배송 api 제작[python] 
+> - 사내 리눅스 메일서버 설치
+
+## certificate
+* english
+  - toeic 950, toeic speaking, ielts
+* develop
+  - sqld, sqlp, 정보처리기사, 빅데이터분석기사, google
 
 
-### popular category
-**millog**의 인기 카테고리를 확인해보세요!
-<div class="grid_4">
-  <a href="https://gangjiyeon.github.io/dev/">  
-    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
-  </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
-    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
-  </a>
-  <a href="https://gangjiyeon.github.io/dev/">  
-    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
-  </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
-    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
-  </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
-    <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
-  </a>  
-</div>
-
-<!--posts-->
 
 
 [blog]: /

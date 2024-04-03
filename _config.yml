@@ -17,7 +17,7 @@
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
-lang:                  ko
+lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
 title:                 milog
@@ -51,21 +51,32 @@ author:
 menu:
   - title:             about me
     url:               /about/
-  - title:             blog
-    url:               /blog/
+  - title:             dev
+    url:               /dev/
     submenu:
     - title:            develop
-      url:              /dev/
+      url:              /develop/
     - title:            computer science
       url:              /cs/
     - title:            data science
       url:              /ds/
-    - title:            daily
-      url:              /daily/
+    - title:            it issue
+      url:              /issue/
+#    - title:            error
+#      url:              /error/
+#    - title:            setting
+#      url:              /setting/
+  - title:             daily
+    url:               /daily/
+    submenu:
+    - title:            daily log
+      url:              /log/
+    - title:            game
+      url:              /game/
+    - title:            book
+      url:              /book/
   - title:             project
-    url:               /docs/
-  - title:             portfolio
-    url:               /about/
+    url:               /project/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -91,7 +102,7 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
-# theme: jekyll-theme-hydejack
+#theme: jekyll-theme-hydejack
 remote_theme: hydecorp/hydejack@v9
 
 

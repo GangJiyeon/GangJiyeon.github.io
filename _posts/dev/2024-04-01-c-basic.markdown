@@ -1,0 +1,133 @@
+---
+layout: post
+title:  "[C언어] 1. 구조, 문장과 블럭, 주석, 토큰"
+date:   2024-03-27 00:00:00 +0900
+categories: dev develop
+---
+이번에는 C언어의 공부하기 위해 꼭 알아야 할 기초 개념인 C언어 구조, 문장과 블럭, 주석, 토큰에 대해 알아보자    
+
+* toc
+{:toc}
+
+<br>
+<br>
+<br>
+
+## **C언어 구조, 문장과 블럭**
+
+### C언어 구조 알아보기
+```c
+#include a
+#define b
+
+void function(int)
+{
+    pritf("hi");
+}
+
+typedef int myint;
+
+int main()
+{
+
+    return 0;
+
+}
+```
+* **문장(statement)이란** 👉 프로그래밍 언어에서 명령을 내리는 최소 단위, 세미콜론(;)으로 종료
+
+* **블록(block)이란** 👉 여러개의 문장을 묶은 것
+    * {} 중괄호(curly brace)로 묶음
+    * 들여쓰기(indetation): tab키 사용, 필수는 아니지만 가독성을 위해 강력 권장!
+<br>
+<br>
+<br>
+
+
+
+## **주석(comments)**
+### 주석(comments)이란?
+* **주석(comments)이란** 👉 일반문장과 달리 프로그램에 영향을 주지 않는 설명문
+    * 언제? 설명, 코드에서 잠시 작동시키지 않을 곳을 지정할 때
+    * 작성 시
+        * 모두가 이해할 수 있게, 프로그램 내용을 적절히 설명, 시각적으로 정돈된 느낌   
+* **C언어 자료형의 종류**    
+C언어의 자료형은 이렇게 구성되어 있는데, 이건 다음 포스팅에서 좀 더 자세히 알아보자!
+
+<br>
+<br>
+<br>
+
+
+## **토큰(token)**
+
+### 토큰이란?
+* **토큰이란**? 👉 C언어에서 가장 작은 단위 요소
+* **토큰의 종류** 👉 키워드, 식별자, 상수, 문자열, 구두점, 연산자   
+
+<br>
+
+**1) 키워드(예약어); keword**    
+키워드는 컴파일러에 의해 이미 의미가 정해져 있는 단어를 의미한다
+
+|토큰(token)|설명 및 예시|
+|:----:|:---|
+|기억부류|변수의 생존 기간을 정하는 키워드 <br>`auto` `extern` `register` `static`  |
+|제어문장|일의 진행순서를 결정하는 키워드 <br>`if` `else` `switch` `case` `break` `defalt` `continue` `for` `do` `while` `goto` `return`    |
+|자료형 |변수의 범위를 지정하는 키워드 <br>`char` `short` `int` `long` `float` `double` `signed` `unsigned` `void` `union` `enum` `struct` `typedef`  |
+|그 외|`const` `volatile` `sizeof`|
+
+<br>
+
+자료형    
+
+|자료형 구분|설명 및 종류|
+|:---:|:---|
+|기본자료형<br>(basic data type)|기본이 되는 자료형<br>▫️ 정수형 `short` `int` `long`  <br>▫️ 실수형 `float` `double` `long double`<br>▫️ 문자형 `char`  =>컴퓨터는 문자를 정수로 처리해 정수형 취급하기도 함<br>▫️ 무치형 `void`|
+|유도형<br>(deprived data type)|기본형에서 나온 자료형 <br>`array; 배열` `pointer 포인터` `function 함수`|
+|사용자정의형<br>(user defined data type)|기본형, 유도형을 이용해 사용자가 만드는 자료형<br>`enumiration 열거형` `structure 구조체` `union 공용체`|
+
+
+<br>
+<br>
+**2) 식별자(예약어); identifiers**    
+프로그래머가 지은 이름 => `변수명칭` `상수명칭` `함수명칭`
+
+식별자 명명 주의사항    
+* 키워드 사용 불가능
+* 첫 번재 문자는 영문이거나 _(되도록 사용X)
+* 용도에 맞고, 의미 있게(줄여쓰기X, 이니셜X)
+
+<br>
+<br>
+**3) 상수; constants**    
+변하지 않는 수
+
+<br>
+<br>
+**4) 문자열; strings**    
+큰 따옴표("") 안에 작성되는 텍스트
+<br>
+<br>
+**5) 구두점; punctuators**    
+의미를 강조하는 기호문자    
+
+|구두점 종류|의미|
+|:---:|:---|
+|[]|배열|
+|()|조건식, 함수, 포인터|
+|{}|제어블록, 배열의 초기화, 태그형틀|
+|*|포인터|
+|,|순차를 강조하는 쉼표연산자|
+|;|문장의 끝|
+|=|변수나 배열의 초기화|
+|:|goto, case의 레이블|
+|...|생략부호|
+|#|전처리지시자|
+
+<br>
+<br>
+**6) 연산자; operators**    
+연산에 사용되는 기호문자
+<br>
+<br>
