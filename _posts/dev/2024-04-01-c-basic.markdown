@@ -127,8 +127,9 @@ categories: dev develop
 
 <br>
 <br>
+
 **5) 구두점; punctuators**    
-의미를 강조하는 기호문자    
+* 의미를 강조하는 기호문자    
 
 |구두점 종류|의미|
 |:---:|:---|
@@ -145,7 +146,8 @@ categories: dev develop
 
 <br>
 <br>
+
 **6) 연산자; operators**    
-연산에 사용되는 기호문자
+* 연산에 사용되는 기호문자
 <br>
 <br>

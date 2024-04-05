@@ -102,7 +102,9 @@ paginate_path:         /:num/
 # Theme
 # ---------------------------------------------------------------------------------------
 
+# 로컬
 # theme: jekyll-theme-hydejack
+# 원격
 remote_theme: hydecorp/hydejack@v9
 
 
