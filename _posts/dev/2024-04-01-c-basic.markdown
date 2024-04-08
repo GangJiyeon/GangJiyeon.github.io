@@ -13,6 +13,7 @@ categories: dev develop
 <br>
 <br>
 
+---
 ## **C언어 구조, 문장과 블럭**
 
 ### C언어 구조 알아보기
@@ -36,7 +37,7 @@ categories: dev develop
 <br>
 
 
-
+---
 ## **주석(comments)**
 ### 주석(comments)이란?
 **1) 주석(comments)이란** 
@@ -73,7 +74,7 @@ categories: dev develop
 <br>
 <br>
 
-
+---
 ## **토큰(token)**
 
 ### 토큰이란?
