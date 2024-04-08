@@ -20,15 +20,16 @@
 lang:                  ko-KR, en-US
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Gang Jiyeon
+title:                 devlog
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  It's githut development blog. It deals with programming, data science, computer science and daily.
+  Hydejack is a boutique Jekyll theme for hackers, nerds, and academics,
+  with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               지연이의 github 개발블로그
+tagline:               millie의 개발블로그
 
 # A list of keywords for your blog
 keywords:              []
