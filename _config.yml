@@ -111,7 +111,8 @@ remote_theme: hydecorp/hydejack@v9
 # ----------------------------------------------------------------------------------------
  
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/bgbg.jpg
+#accent_image:          /assets/img/bgbg.jpg
+accent_image:          none
 accent_color:          rgb(159,169,216)
 
 favicon: /assets/img/favicon.ico
@@ -120,7 +121,7 @@ apple_touch_icon: /assets/img/favicon.png
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(159,169,216)
+theme_color:           rgb(113,119,151)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
