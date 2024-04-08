@@ -41,12 +41,12 @@ table > thead, table > tbody{
 @media screen and (min-width: 1664px){
     hy-drawer {
         width: calc(50% - 31rem);
-        --hy-drawer-peek-width: 21rem;
+        --hy-drawer-peek-width: 21rem !important;
     }
 }
 @media (min-width: 1664px){
     body::before {
-        width: 21rem;
+        width: 21rem !important;
     }
 }
 @font-face {
