@@ -83,3 +83,12 @@ h2.h1{
 .sidebar-about .avatar {
     margin-bottom: 1rem;
 }
+
+#breadcrumbs>ul{
+    height: 2rem !important;
+    
+}
+#breadcrumbs>ul > a{
+    border-radius: 5px !important;
+    background-color: rgb(159, 169, 216, 0.5);
+}
