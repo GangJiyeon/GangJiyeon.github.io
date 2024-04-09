@@ -18,19 +18,7 @@ h2 > strong{
     padding: 0px 5px 9px 0px;
 }
 */
-h2.h1{
-    border: none;
-    font-family: 'GangwonEdu_OTFBoldA' !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item {
-    font-family: 'GangwonEdu_OTFBoldA' !important;
-    
-}
-.sidebar-about .avatar {
-    margin-bottom: 1rem;
-}
+
 table{
     margin: 0 !important;
     width: 100% !important;
@@ -41,12 +29,20 @@ table > thead, table > tbody{
 @media screen and (min-width: 1664px){
     hy-drawer {
         width: calc(50% - 31rem);
-        --hy-drawer-peek-width: 21rem !important;
+        --hy-drawer-peek-width: 17rem !important;
     }
 }
-@media (min-width: 1664px){
+@media screen and (min-width: 64em){
+    hy-drawer {
+        width: 17rem !important;
+        --hy-drawer-peek-width: 17rem !important;
+    }
+}
+
+
+@media (min-width: 64em){
     body::before {
-        width: 21rem !important;
+        width: 17rem !important;
     }
 }
 @font-face {
@@ -54,4 +50,36 @@ table > thead, table > tbody{
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+p, a, h1, h2, h3, li, ul, table{
+    font-family: 'Pretendard-Regular';
+    letter-spacing: -0.005rem;
+    word-spacing: 0.05rem;
+    line-height: 2rem;
+  }
+  
+@font-face {
+font-family: 'Pretendard-Regular';
+src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+font-weight: 400;
+font-style: normal;
+}
+  
+
+h2.h1{
+    border: none;
+    font-family: 'Pretendard-Regular' !important;
+    //padding: 0 !important;
+    //margin: 0 !important;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+}
+.sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item {
+    font-family: 'Pretendard-Regular' !important;
+    font-weight: 400 !important;
+    font-size: 15px !important;
+}
+.sidebar-about .avatar {
+    margin-bottom: 1rem;
 }

@@ -111,6 +111,10 @@ a::after{
   width: 90px !important;
   height: 90px !important;
 }
+.grid_3 > a{
+  border: solid 1px;
+  border-radius: 10px;
+}
 .grid_4 > a{
   border: solid 1px;
   border-radius: 20px;
@@ -119,7 +123,15 @@ a::after{
 }
 .grid_4 > a > span{
   margin: 5px 0px 0px 0px !important;
+  display: block;
 }
+.cos_border{
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  //border: rgb(159, 169, 216, 0.5) solid 1px;
+}
+
+
 code{
   font-family: 'LINESeedKR-Bd';
   font-size: 0.9rem !important;
@@ -138,6 +150,8 @@ div.highlight>button{
 .highlighter-rouge{
   margin-bottom: 10px !important;
 }
+
+
 /*목차*/
 #markdown-toc{
   width: 100% !important;
@@ -157,3 +171,5 @@ div.highlight>button{
 #markdown-toc > li > ul, blockquote > ul{
   margin: 0;
 }
+
+

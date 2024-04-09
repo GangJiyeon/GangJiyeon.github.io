@@ -9,7 +9,11 @@ redirect_from:
 
 # welcome 🎉
 
+
 <!--author-->
+---
+<br>
+<br>
 
 
 ## about website
@@ -17,46 +21,52 @@ redirect_from:
 주로 공부하면서 알게 된 개발지식을 업로드합니다.😊
 
 ### popular posting
-**milog**의 인기글 시리즈를 확인해보세요!
+인기글 시리즈를 확인해보세요!
 
 <div class="grid_3">  
   <a href="http://127.0.0.1:4000/dev/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
+    <div class="cos_border">
     <span>안녕 인기글이 될 첫번째 글이야</span>  
+    </div>
   </a>
   <a href="http://127.0.0.1:4000/dev/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
+    <div class="cos_border">
     <span>안녕 인기글이 될 첫번째 글이야</span>  
+    </div>
   </a>
   <a href="http://127.0.0.1:4000/dev/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
+    <div class="cos_border">
     <span>안녕 인기글이 될 첫번째 글이야</span>  
+    </div>
   </a>
 </div>
 
 
 ### popular category
-**milog**의 인기 카테고리를 확인해보세요!
+인기 카테고리를 확인해보세요!
 <div class="grid_4">
   <a href="https://gangjiyeon.github.io/dev/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
     <span>develop</span>  
   </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
+  <a href="https://gangjiyeon.github.io/cs/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
+    <span>cs</span>  
   </a>
-  <a href="https://gangjiyeon.github.io/dev/">  
+  <a href="https://gangjiyeon.github.io/ds/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
+    <span>ds</span>  
   </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
+  <a href="https://gangjiyeon.github.io/daily/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
+    <span>daily log</span>  
   </a> 
-  <a href="https://gangjiyeon.github.io/dev/">  
+  <a href="https://gangjiyeon.github.io/project/">  
     <img class="circle_s" src="/assets/img/bgbg.jpg" align="center" >
-    <span>develop</span>  
+    <span>project</span>  
   </a>  
 </div>
 
