@@ -14,7 +14,7 @@ categories: dev develop
 <br>
 
 ---
-## **제어문(Control Statement**
+## **제어문(Control Statement)**
 ### **제어문이란**
 **1) 제어문이란?** 순차적인 실행뿐만 아니라 선택과 반복 등 순차적인 실행을 변경하여 프로그램의 실행순서를 제어하는 문장     
 <br>

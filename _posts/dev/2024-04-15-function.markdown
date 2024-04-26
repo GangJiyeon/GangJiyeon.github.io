@@ -1,0 +1,72 @@
+---
+layout: post
+title:  "[C언어] 10. 함수(function)"
+date:   2024-04-07 00:00:00 +0900
+categories: dev develop
+---
+이번에는 C언어의 함수(function)에 대해 알아보자.    
+
+* toc
+{:toc}
+
+<br>
+<br>
+<br>
+
+---
+## **함수**
+### **함수란**
+**1) 함수란(function)**
+* 특정한 작업을 처리하도록 작성한 프로그램 단위
+* 필요한 입력을 받아 원하는 어떤 기능을 수행한 후 결과를 반환(return)하는 프로그램
+
+<br>
+
+**2) 함수의 종류**
+* 라이브러리 함수(library function) 
+	* 표준함수(standard function) 
+	* 이미 개발환경에 포함되어 있는 함수
+	* 함수 내부 구현 방법을 몰라도 입력값과 반환값만 이해하면 쉽게 사용 가능
+* 사용자 정의 함수(user defined function)
+	*  필요에 의해 개발자가 직접 개발하는 함수
+
+<br>
+
+**3) 함수정의와 호출**
+* 사용자 정의 함수를 사용하기 위해선 아래 3가지가 필요하다
+	* `함수선언(function declaration)`
+	* `함수호출(function call)`
+	* `함수정의(function definition`
+
+```c
+#include <stdio.h>
+
+//함수선언
+void massage();	//함수 원형
+void cacao();	//함수 원형
+
+int main(void)
+{
+	put("main function start");	//라이브러리 함수 호출
+	massage();					//사용자 정의 함수 호출
+	cacao();					//사용자 정의 함수 호출
+	put("main function finish");
+}
+
+//함수정의
+void massage()
+{
+	puts("\t메시지다!!!");
+}
+
+//함수정의
+void cacao()
+{
+	puts("\t카톡!카톡!");
+}
+```
+
+<br>
+<br>
+
+### **절차적 프로그래밍**
