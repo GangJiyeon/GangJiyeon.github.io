@@ -7,7 +7,7 @@ redirect_from:
   -
 ---
 
-# welcome 🎉
+# welcome 
 
 
 <!--author-->
@@ -18,7 +18,7 @@ redirect_from:
 
 ## about website
 프로그래밍, 데이터 사이언스, 일상 회고를 위한 웹사이트입니다.   
-주로 공부하면서 알게 된 개발지식을 업로드합니다.😊
+주로 공부하면서 알게 된 개발지식을 업로드합니다.
 
 ### popular posting
 인기글 시리즈를 확인해보세요!
