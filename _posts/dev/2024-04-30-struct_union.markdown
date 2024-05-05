@@ -31,14 +31,14 @@ categories: dev develop
 
 * 구조체 정의 : 변수 선언에서 이용될 새로운 구조체 자료형을 정의하는 구문
 	* 구조체를 만들 구조체 틀(template) 정의
-	* 구조체 멤버 : 일반변수, 포인터변수, 배열, 다른 구조체 변수 및 포인터
+	* 구조체 멤버(필드) : 일반변수, 포인터변수, 배열, 다른 구조체 변수 및 포인터
 
 ```c
 /* 구조체 정의 */
 struct 구조체태그이름
 {	
-	자료형 변수명;	//구조체 구성요소, 초기값 설정 불가능
-	자료형 변수명;	//마지막 멤머에도 세미콜론 필수
+	자료형 변수명;	//구조체 구성요소(멤머), 초기값 설정 불가능
+	자료형 변수명;	//마지막 멤버에도 세미콜론 필수
 };	//세미콜론 필수
 
 struct student
@@ -61,6 +61,7 @@ struct class
 //1. 구조체 정의 후 구조체변수 선언
 struct 구조체태그이름 변수명;
 struct 구조체태그이름 변수명1, 변수명2, 변수명3, ...;	//여러 변수의 선언도 가능
+struct student students;
 
 //2. 구조체 정의와 구조체변수 선언을 함께
 struct student
@@ -116,26 +117,106 @@ struct account you;
 you = (struct account) {.name = "김파이", .balance = 7000};
 ```
 
-👉 실제 구조체의 크기 : 멤버의 크기의 합보다 크거나 같음
-
 <br>
 
 **3) 구조체 활용하기**
-* 구조체 변수의 대입과 동등비교
 
 ```c
-//동일한 구조체형 변수는 대입이 가능
+/* 동일한 구조체형 변수는 대입이 가능 */
 struct goal one = {1, "편입시켜줘", "목표1"};
 struct goal two = {2, "복권2등당첨시켜줘", "목표2"};
 struct goal three = twol
 
-//구조체 비교 - 멤버 하나하나 비교해야한다
+
+/* 구조체에 문자열 대입 */
+struct account
+{
+	char name[12];
+	int actnum;
+};
+
+struct account mine;
+strcut account yours;
+
+strcpy(mine.name, "내이름");
+strcpy_s(yours.name, 12, "니이름");
+//yours.name = "니이름" //오류
+
+yours.actnum = 10002;
+
+
+/* 구조체 크기 *
+//실제 구조체의 크기 : 멤버의 크기의 합보다 크거나 같음
+printf("구조체 크기 : %zu\n", sizeof(mine);
+
+
+/* 구조체 비교 - 멤버 하나하나 비교해야한다 */
 if(one.num == two.num)
 	printf("num가 같은 구조체입니다");
 
 if(!(strcmp(one.content, two.content))	//문자열비교 : strcmp(인자, 인자);
 	printf("내용이 같은 구조체입니다");
+
+
+/* 구조체 멤버로 사용되는 구조체 */
+struct data
+{
+	int year;
+	int month;
+	int day;
+};
+
+struct account
+{
+	struct data open;
+	char name[12];
+	int actnum;
+	double balance;
+};
+
+struct account me = { {2022, 3, 9}, "홍길동", 1001, 3000000 };
 ```
+
+<br>
+
+**4) 구조체 정의의 위치**
+* 구조체 유효범위 : 전역 또는 지역으로 모두 가능
+
+```c
+//전역
+struct date
+{
+	int year;
+	int month;
+	int day;
+};
+
+int main(void)
+{
+	//지역
+	struct account
+	{
+		char name[12];
+		int actnum;
+		double balance;
+	};
+
+	return 0;
+};
+```
+
+<br>
+
+**5) `char *`와 `char[]`
+
+|char 포인터|char 배열|
+|---|---|
+|`char *dept;`|`char name[12];`|
+|`char *dept = "컴퓨터정보공학과";`<br>dept : "컴퓨터정보공학과"|`char name[12] = "홍길동"`<br>name : 홍길동\0|
+|단순히 문자열 상수를 다루는 경우 효과적|12바이트 공간을 가지며 문자열을 저장하고 수정이 필요한 경우 효과적|
+|정상사용<br>`dept = "컴퓨터정보공학과";`|정상사용<br>`strcpy(name, "닭강정");`<br>`scanf("%s", name);`|
+|오류발생<br>`strcpy(dept, 컴퓨터정보공학과닭강정");`<br>`scanf("%s", dept);`|오류발생<br>`name = "닭강정";`|
+|문자열 상수의 첮 주소를 저장하므로, 문자열 자체를 저장하거나 수정하는 것은 불가능|문자열 자체를 저장하는 배열이브로, 문자열의 저장 및 수정이 가능|
 
 <br>
 <br>
