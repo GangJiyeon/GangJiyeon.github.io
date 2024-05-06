@@ -249,7 +249,7 @@ union data
 
 typedef union data uniondata;
 	uniondata data2 = {'a'};
-	//오류 - uniondata data2 = {1}
+	//컴파일 시 경고 - uniondata data2 = {1}
 	uniondata data3 = data2;	//다른 변수로 초기화 가능
 ```
 
@@ -260,6 +260,16 @@ typedef union data uniondata;
 * 멤버 유형의 크기에 따른 공간 참조
 * 마지막에 저장한 멤버의 참조만 가능
 
+```c
+union data value = {.cnt = 2);
+
+data2.ch = 'a';
+printf("%c", data2.ch);
+
+data2.cnt = 100;	//data2.cnt만 의미가 있음
+print("%d", data2.cnt};
+```
+
 <br>
 <br>
 <br>
@@ -269,18 +279,57 @@ typedef union data uniondata;
 ### **자료형 재정의 typedaf**
 **1) typedef 구문**
 * typedef : 이미 사용되는 자료 유형을 다른 새로운 자료형 이름으로 재정의
-* 프로그램의 시스템 간 호환성과 편의성을 위해 필요
 
 ```c
 typedef 기존자료유형이름 새로운자료형, 새로운자료형;
 typedef int profit;	//자료형이 int인 profit 자료형
+typedef int integer, word
+```
+
+* 프로그램의 시스템 간 호환성과 편의성을 위해 필요
+
+```c
+[visual c++]
+typedef int myint;
+
+my salary = 2000000;
+```
+
+```c
+[turbo c++]
+typedef long myint;
+
+myint salary = 2000000;
 ```
 
 <br>
 
-### **구조체 자료형 재정의**
+**2) typedef의 사용범위**
 
 ```c
+//함수 외부에서 정의된 자료형은 이후 파일에서 사용가능
+typedef unsigned int budget;
+
+int main(void)
+{
+	budget year = 245000;	//새로운 자료형 budget 사용
+
+	//함수 내부에서 정의된 사료형은 함수 내부에서만 사용 가능
+	typedef int profit;
+	profit month 460000;	//새로운 자료형 profit 사용
+	
+	return 0;
+}
+```
+
+<br>
+<br>
+
+### **구조체 자료형 재정의**
+* typedef를 이용하여 struct를 생략한 새로운 자료형 만들기
+
+```c
+/* 방법 1. 자료형이 struct 구조체태그명인 자료형 선언 */
 struct date
 {
 	int year;
@@ -290,7 +339,7 @@ struct date
 
 typedef struct date date;	//자료형이 struct date인 date자료형
 
-//구조체 정의를 typedef와 함께 처리
+/* 방법 2. 구조체 정의를 typedef와 함께 처리 */
 typedef struct
 {
 	char title[30];
@@ -319,18 +368,59 @@ struct lecture
 };
 
 //구조체 포인터 변수 선언
-typedef struct lecture lecture;
-lecture *p;
+typedef struct lecture lecture;		//자료형이 struct lecture인 lecture 선언	
+lecture *p;				//lecture 포인터 p 선언
 
 //구조체 포인터 변수 사용
-lecture os = {"운영체제", 2, 3};
-lecture *p = &os
+lecture os = {"운영체제", 2, 3};		//자료형이 lecture인 구조체 os
+lecture *p = &os			//os를 가리키는 lecture 포인터 p
 ```
 
 <br>
 
 **2) 포인터변수의 구조체 멤버 접근연산자 >**
-* `p -> name` : 포인터 p가 가리키는 구조체의 멤버 name
+
+```c
+struct lecture
+{
+	char name[20];
+	int type;
+	int credit;
+	int hours;
+};
+
+typedef struct lecture lecture;
+
+char *head[] = {"강좌명", "강좌구분", "학점", "사수");
+char *lectype[] = {"교양", "일반선택", "전공필수", "전공선택"};
+
+int main()
+{
+	lecture os = {"운영체제", 2, 3, 3};
+	lecture c = {"C프로그래밍", 3, 3, 4};
+	lecture *p = &os;
+
+	printf("구조체크기 : %zu, 포인터크기 : %zu\n", sizeof(os), sizeof(p));
+	//32, 8
+
+	printf("%s %s %s %s", head[0], head[1], head[2], head[3]);
+	//강좌명 강좌구분 학점 사수
+
+	printf("%s %s %d %d", p->name, lectype[p->type], p->credit, p->houres);
+	//운영체제 전공필수 3 3
+
+	p = &c;	//포인터 변경
+	printf("%s %s %d %d", (*p).name, leactype[(*0).type], (*p).credit, (*p).hours);
+	//C프로그래밍 전공선택 3 4
+
+	printf("%c %s %d %d", *c.name, lectype[c.type], c.credit, c.hours);
+	//C 전공선택 3 4
+	
+	return 0;
+} 
+```
+
+* `p->name` : 포인터 p가 가리키는 구조체의 멤버 name
 * `(*p).name` : 포인터 p가 가리키는 구조체의 멤버 name
 * `*p.name` : 문법오류
 * `os.name` : 
@@ -366,11 +456,25 @@ p->ch = 'a';
 ## **구조체 배열**
 
 ```c
-lecture c[] = {
-				{"인간과 사회", 0, 1},
-				{"경제학개론", 1, 2},
-				{"자료구조", 1, 4}
-			  };
+struct lectuer
+{
+	char name[20];
+	int type;
+	int credit;
+};
 
-lecture *p = c;
+typedef struct lecture lecture;
+
+int main()
+{
+	lecture c[] = {
+			{"인간과 사회", 0, 1},
+			{"경제학개론", 1, 2},
+			{"자료구조", 1, 4}
+		      };
+
+	lecture *p = c;
+	return 0;
+}
+
 ```
