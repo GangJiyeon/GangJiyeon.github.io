@@ -145,7 +145,7 @@ strcpy_s(yours.name, 12, "니이름");
 yours.actnum = 10002;
 
 
-/* 구조체 크기 *
+/* 구조체 크기 */
 //실제 구조체의 크기 : 멤버의 크기의 합보다 크거나 같음
 printf("구조체 크기 : %zu\n", sizeof(mine);
 
@@ -207,7 +207,7 @@ int main(void)
 
 <br>
 
-**5) `char *`와 `char[]`
+**5) `char *`와 `char[]`**
 
 |char 포인터|char 배열|
 |---|---|
@@ -237,7 +237,7 @@ int main(void)
 ```c
 union 공용체태그이름
 {
-	자료형 멤버변수명;	//공용체 구성요소(struct member)
+	자료형 멤버변수명;	//공용체 구성요소(union member)
 	자료형 멤버변수명;
 }[변수명1][,변수명2];	//세미콜론 필수
 
