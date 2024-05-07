@@ -21,8 +21,9 @@ categories: dev develop
 
 **2) 제어문의 종류**
 * **조건문(조건선택)** : 두 개 또는 여러 개 중의 하나를 선택하는 구조
-* **분기분(분기처리)** : 정해진 장소로 이동하는 구조
 * **반복문(반복)** : 반복 몸체인 여러문장을 반복하는 구조
+* **분기분(분기처리)** : 정해진 장소로 이동하는 구조
+
 <br>
 <br>
 <br>
@@ -293,17 +294,7 @@ int main()
 }
 ```
 
-<br>
-<br>
-<br>
 
----
-## **분기문**
-### **분기문이란**
-* `break` : 작업을 수행하는 도중 조건에 따라 반복이나 선택을 빠져나감
-* `continue` : 일정 구문을 수행하지 않고 다음 반복을 실행
-* `goto` : 지정된 위치로 이동
-* `return` : 작업 수행을 마치고 이전 위치로 돌아가는 구문
 
 <br>
 <br>
@@ -321,31 +312,80 @@ int main()
 * 반복(repetition) : 순환 = 루프, 같거나 비슷한 일을 여러 번 수행하는 작업
 * 반복몸체(repetition body) : 반복조건을 만족하면 일정하게 반복되는 블록
 
+<br>
+<br>
+
 ### **while문**
 **1) while문 구조**
 
 ```c
 while(cond)
 {
-    반복몸체(loop body);
+    반복몸체(loop body, stmt);
 };
 ```
 
-* `cond` : 반복조건
-* 
+* 반복조건인 cond를 평가하여 0이 아니면(참이면) 반복몸체인 stmt 실행, cond가 거짓일 때까지 반복
+    * `cond` : 반복조건, cond가 `0(거짓)`이 될 때까지 반복
+    * `stmt` : 반복몸체, 필요(여러줄)하면 블록으로 구성 가능
+
+<br>
+
+**2) while문 예시**
+```c
+int count = 0;
+
+while(count <= 3)    //제어변수 : 반복횟수를 제어하는 변수
+{
+    printf("제발 복권 당첨되게 해주세요\n");
+    count++;        //count++가 없으면 무한반복(indefinite loop), Ctrl+C로 종료 가능
+}
+
+//표준입력으로 받은 실수가 0이 아니면 계속 더하는 while문
+double number = 1;
+while(number != 0.0)
+{
+    printf("실수입력");
+    scanf("%lf", &number);
+    sum += number;
+}
+```
 
 <br>
 <br>
 
 ### **do while문**
 **1) do while문 구조**
+* 반복몸체 수행 후에 반복 조건을 검사
+* 반복 횟수가 정해지지 않고 입력 받은 자료 값에 따라 반복 수행의 여부를 결정하는 구분에 유용
+* 센티널 값(sentinel value) 검사에 유용
+* `stmt` : 가장 먼저 실행, 반복몸체가 여러 문장이거나 필요하면 블록으로 구성
+* `cond` : 반복조건, stmt실행 후 cond를 평가하여 0(거짓)이 될 때까지 stmt 실행
+
+> 센티널 값 : 반복의 종료를 알리는 특정한 자료 값
 
 ```c
 do
 {
-    반복몸체(loop body);
+    반복몸체(loop body, stmt);
 }
-while(cond);
+while(cond);        //세미콜론 필수
+```
+
+<br>
+
+**2) do while문 예시**
+
+```c
+int input;
+
+do
+{
+    printf("| 0. 종료 | 1. 아메리카노 | 2. 카페라떼 | 3. 카푸치노 |\n");
+    printf("주문할 커피 또는 종료(0) 입력");
+    scanf("%d", &input);
+}
+while(input != 0)    //while(input)
 ```
 
 <br>
@@ -353,16 +393,54 @@ while(cond);
 
 ### **for문**
 **1) for문의 구조**
+* `init` : 초기화(initialization), 단 한번만 수행
+* `cond` : 반복조건(condition), cond가 0이면 반복 종료
+* `inc` : 증감(increment), 반복을 결정하는 제어 변수의 증감 수행, stmt 실행후 inc 실행
+* `stmt` : 반복몸체가 여러 문장이거나 필요하면 블록으로 구성
 
 ```c
-for(초기화; 반복조건; 증감)
+for(init; cond; inc)
 {
-    반복몸체(loop body);
+    반복몸체(loop body, stmt);
+}
+
+//세미콜론으로 구분되는 항목은 모두 생략 가능, 세미콜론은 필수
+//무한반복
+for(;;)    
+{
+    stmt;
 }
 ```
 
+<br>
 
+**2) for문 예시**
 
+```c
+for(int i = 0; i <= MAX; i++)    //i처럼 반복의 횟수를 제어하는 변수를 제어변수
+    printf("반복 %d", i + 1);
+
+double celsius = 12.46;
+for(int i = 0; i <= MAX; i++, celsius += 10) 
+    printf("반복 %d", i + 1);
+```
 
 
 <br>
+<br>
+<br>
+
+---
+## **분기문**
+### **분기문이란**
+* `break` : 작업을 수행하는 도중 조건에 따라 반복이나 선택을 빠져나감
+* `continue` : 일정 구문을 수행하지 않고 다음 반복을 실행
+* `goto` : 지정된 위치로 이동
+* `return` : 작업 수행을 마치고 이전 위치로 돌아가는 구문
+
+<br>
+<br>
+
+### **break문**
+**1) break문**
+
