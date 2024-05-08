@@ -118,15 +118,110 @@ int fclose(FILE *_File);
 ---
 ## **텍스트 파일 입출력**
 ### **파일에 서식화된 문자열 입출력**
-**1) fprint()**
-* 텍스트 파일에 서식화된 자료(문자열)을 출력하는 함수
+**1) fprint()와 fscanf()**
+* 텍스트 파일에 서식화된 자료(문자열)을 출력 혹은 입력 하는 함수
+* 헤더파일 `stdio.h` 포함
 
+```c
+int fprintf(FILE *_File, const char *_Format, ...);
+int fscanf(FILE *_File, const char *_Format, ...);
+int fscanf_s(FILE *_File, const char *_Format, ...);
+
+//_File : 서식화된 입출력 스트림의 목적지 파일, 입출력에 이용될 파일
+//_Format : 입출력 제어문자열
+//... : 여러 개의 출력될 변수 또는 상수
+```
+
+```c
+//이름과 성적을 입력해 파일에 쓰고, 다시 표준 출력에 보이기
+
+#define _CTR_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+	char fname[] = "grade.txt";
+	FILE *f;
+	char name[30];
+	int point1, point2, cnt = 0;
+
+	//1. 파일 열기 - 쓰기 권한
+	if(fopen_s(&f, fname, "w") != 0)	//인자 : 파일포인터 주소, 파일이름, 모드
+	{
+		printf("파일이 열리지 않음");
+		exit(1);
+	}
+
+	//2. 이름과 성적 입력받기
+	printf("이름, 중간성적, 기말성적을 입력하세요\n");
+	scanf("%s %d %d", name, &point1, &point2);
+
+	//3. 파일에 쓰기
+	fprintf(f, "%d %s %d %d\n", ++cnt, name, point1, point2);
+
+	//4. 파일 닫기
+	fclose(f);
+
+	//5. 파일 열기 - 읽기 권한
+	if(fopen_s(&f, fname, "r") != 0)
+	{
+		printf("파일이 열리지 않음");
+		exit(1);
+	}
+
+	//6. 파일 gread.txt에서 읽기
+	fscanf(f, "%d %s %d %d\n", &cnt, name, 30, &point1, &point2);
+
+	//7. 표준출력에 쓰기
+	fprintf(stdout, "%s %s %s %s\n", 번호, 이름, 중간, 기말);
+	fprintf(stdout, "%d %s %d %d", cnt, name, point1, point2);
+
+	//8. 파일 종료 후 스트림 닫기
+	fclose(f);
+
+	return 0;
+}	
+```
 
 <br>
 <br>
 
-**2) fscanf()**
-* 텍스트 파일에 서식화된 자료(문자열)를 입력하는 함수
+**2) 표준파일의 종류**
+
+|표준파일|키워드|장치(device)|
+|---|---|---|
+|표준입력|`stdin`|키보드|
+|표준출력|`stdout`|모니터 화면|
+|표준에러|`stderr`|모니터 화면|
+
+<br>
+<br>
+
+### **파일 문자열 입출력**
+**1) fgets()와 fputs()**
+* fgets() : 파일로부터 한 행의 문자열을 입력받는 함수
+* fputs() : 파일로 한 행의 문자열을 출력하는 함수
+* 헤더파일 `stdio.h` 포함
+
+```c
+/* fgets() */
+char *fgets(char *_Buf, int _MaxCount, FILE *_File);
+
+/*
+- _File로부터 한 행의 문자열을 _MaxCount 수의 _Buf 문자열에 입력 수행
+- char *_Buf : 문자열이 저장될 포인터
+- int _MaxCount : 입력할 문자의 최대 수
+- FILE *_File : 입력 문자열이 저장될 파일
+*/
+
+/* fputs() */
+int fputs(cahr *_Buf, FILE *_File);
+
+/*
+- _Buf 문자열을 _File에 출력 수행
+*/
+```
 
 <br>
 <br>
