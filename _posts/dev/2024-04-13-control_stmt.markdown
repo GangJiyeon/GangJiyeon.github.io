@@ -443,4 +443,102 @@ for(int i = 0; i <= MAX; i++, celsius += 10)
 
 ### **break문**
 **1) break문**
+* 언제 : 반복 내부에서 반복을 종료하기 위해, switch문의 종료
+
+```c
+//for문
+for(;;)
+{
+    ...
+    break;    //1. break를 만나면
+    ...       //   break 다음코드는 실행하지 않음
+}
+next;         //2. for문을 종료하고 다음 코드 실행
+
+
+//while문
+while(...)
+{
+    ...
+    break;    //1. break를 만나면
+    ...       //   break 다음 코드는 실행하지 않음
+}
+next;         //2. while문을 종료하고 다음 코드 실행
+
+
+//do while
+do
+{
+    ...
+    break;    //1. break를 만나면
+    ...       //   break 다음 코드는 실행하지 않음
+}
+while(...);
+next;        //2. do while문을 종료하고 다음 코드 싷행
+```
+
+* 반복이 중첩된 경우 break를 포함하는 가장 근접한 내부 반복을 종료
+
+```c
+while(...)
+{
+    ...
+    for(;;)
+    {
+        ...
+        break;    //1. break를 만나면
+        ...       //   가장 근접한 내부 반복을 종료
+    }
+
+    next;         //2. for문을 종료하고 다음 코드 실행
+}
+next;
+```
+
+<br>
+<br>
+
+**2) continue문**
+* continue문이 위치한 이후 반복몸체의 나머지 부분을 실행하지 않고 다음 반복을 계속 유지하는 문장
+    * while문과 do while문 : continue를 만나면 조건 검사로 이동하여 실행
+    * for문 : 증감부분으로 이동
+* 중첩된 반복에서 continue는 자신이 속한 가장 근접한 반복에서 다음 반복을 실행
+ 
+```c
+while(cond1)
+{
+    ...
+    continue;    //cond1로 이동
+
+    for(init; cond2; inc)
+    {
+        continue;    //cond2로 이동
+        ...
+    }
+}
+```
+
+<br>
+<br>
+
+**3) goto문**
+* lable이 위치한 다음 문장으로 실행순서를 이동하는 문장
+* lable은 `콜론(:)`을 이용하여 지정
+
+```c
+int main(void)
+{
+    int count = 1;
+
+loop:
+    printf("%3d", count);
+    if(++count <= 10)
+        goto loop;
+
+    printf("종료");
+
+    return 0;
+}
+```
+
 
