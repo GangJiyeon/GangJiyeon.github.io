@@ -517,5 +517,124 @@ int main()
 <br>
 
 
+
 ---
 ## **파일 접근 처리**
+### **순차 접근과 임의 접근**
+**1) 파일 위치(file position)**
+* 파일 위치 : 파일 내부를 바이트 단위로 파일 내부 위치를 나타내는 값
+* 파일위치 = 파일 지시자(file indicator) = 파일표시자
+* 파일의 마지막 : 파일의 마지막을 알리는 EOF(End of FIle)
+
+<br>
+
+**2) 파일스트림 연결 시 파일 위치**
+* 파일을 처음 열면 : 모드에 관계 없이 파일 위치는 0
+* 모드가 파일추가(a) 
+	* 파일을 처음 열면 : 파일 위치 0
+	* 자료를 파일에 쓰면 : 자동으로 파일 위치가 마지막으로 이동되어 추가
+	* 파일 위치를 임의로 이동 : 파일의 마지막으로 이동하여 추가해야 함 
+
+<br>
+
+
+**3) 파일의 순차접근과 임의접근**
+* 순차접근(sequential access) : 파일 위치를 처음부터 하나씩 증가시키면서 파일을 참조하는 방식
+* 임의접근(random-access) 
+	* 파일의 어디라도 바로 참조하는 방식
+	* `fseek()`, `ftell()`, `rewind()` 등을 활용해 임의접근 
+
+|함수|기능|
+|---|---|
+|`int fseek(FILE *, long offset, int pos)`|파일 위치를 세 기준점(pos)으로 부터 offset만큼 이동|
+|`long ftell(FILE *)`|파일의 현재 파일 위치를 반환|
+|`void rewind(FILE *)`|파일의 현재 위치를 0위치(파일의 시작점)로 이동|
+
+<br>
+<br>
+
+### **파일의 임의 접근 함수**
+**1) 함수 fseek()**
+```c
+/* fseek() 
+- 파일 위치를 자유 자래로 이동하는 함수 
+- 함수 원형이 헤더파일 stdio.에 정의 */
+
+/* 함수원형 
+1) 파일 _File의 기준점 _Origin에서 _Offset만큼 파일 포인터 이동
+- FILE *_File : 파일 포인터
+- long _Offset : 기준점으로부터 떨어진 값(offset)
+- int _Origin : 오프셋을 계산하는 기준점, 정수형 기호 상수
+2) 성공하면 0반환, 실패하면 0이 아닌 정수 반환 */
+int fseek(FILE *_File, long _Offset, int _Origin);
+```
+
+> 파일의 오프셋 기준의종류를 나타내는 상수
+
+|기호|값|의미|
+|---|---|---|
+|SEEK_SET|0|파일의 시작위치|
+|SEEK_CUR|1|파일의 현재위치|
+|SEET_END|2|파일의 끝 위치|
+
+<br>
+
+**2) 파일 열기 다양한 모드**
+* 파일 열기 함수 `fopen_s()`의 모드 종류
+	* 파일모드에서 + : 수정모드, 원래의 모드에서 읽기 또는 쓰기가 추가되는 모드
+	* 파일모드 전환 : `fseek()`, `rewind()`와 같은 함수 호출이 반드시 필요 
+
+|모드|파일열기모드|모드전환|파일이 있는 경우|파일이 없는 경우|
+|---|---|---|---|---|
+|`r`|읽기(read)|쓰기(write) 불가능|파일의 처음에서 읽기 시작|에러|
+|`w`|쓰기(write)|읽기(read) 불가능|이전 내용을 지우고 처음부터 쓰기 시작|새로 생성|
+|`a`|추가(append)|읽기(read) 불가능|파일의 마지막에서 파일의쓰기를 시작<br>파일의 중간에 쓰는 것은 불가능|새로 생성|
+|`r+`|읽기(read)|쓰기(write)|파일의 처음에서 읽기 시작|에러|
+|`w+`|쓰기(write)|읽기(read)|이전 내용을 지우고 처음부터 쓰기 시작|새로 생성|
+|`a+`|추가(append)|읽기(read)|파일의 마지막에서 파일의쓰기를 시작<br>파일의 중간에 쓰는 것은 불가능|새로 생성|
+
+* 이진파일 열기 함수 fopen()의 모드 종류
+	* `rb` : 이진 파일의 읽기(read) 모드로 파일 열기
+	* `wb` : 이진 파일의 쓰기(write) 모드로 파일 열기
+	* `ab` : 이진 파일의 추가(append) 모드로 파일 열기
+	* `rb+`, `r+b` : 이진 파일의 읽기(read)와 쓰기(write) 모드로 파일 열기
+	* `wb`, `w+b` : 이진 파일의 읽기(read)와 쓰기(write) 모드로 파일 열기
+	* `ab`, `a+b` : 이진 파일의 추가(append) 모드로 파일 열기
+
+<br>
+<br>
+
+### **입출력 및 파일 삭제, 이름 바꾸기 함수**
+**1) 텍스트 파일 입출력 함수**
+* 헤더파일 stdio.h 삽입
+
+|자료|종류|표준입출력|파일입출력|
+|---|---|---|---|
+|문자|입력|`int getchar(void)`|`int getc(FILE *)`<br>`int fgetc(FILE *)`|
+||출력|`int putchar(int)`|`int putc(int, FILE *)`<br>`int fputc(int, FILE *)`|
+|문자열|입력|`char *gets(char *)`|`char *fgets(char *, int, FILE *)`|
+||출력|`int puts(const char *)`|`int fputs(const char *, FILE *,)`|
+|서식자료|입력|`int scanf(const char *, ...)`<br>`int scanf_s(const char *,...)`|`int fscanf(FILE *, const char *, ...)`<br>`int fscanf_s(FILE *, const char *, ...)`|
+||출력|`int printf(const char *, ...)`|`int fprintf(FILE *, const char*,...)`|
+
+<br>
+
+**2) 이진 파일 입출력 함수**
+* 블록 입력 : `size_t fread(void *, size_t, size_t, FILE *)`
+* 블록 출력 : `size_t fwrtie(const void *, size_t, size_t, FILE *)`
+* 정수 입력 : `int _getw(FILE *)`
+* 정수 출력 : `int _putw(int, FILE *)`
+
+<br>
+
+**3) 파일 처리함수 `remove()`, `rename()`**
+* remove() : 지정된 특정한 파일 삭제
+* rename() : 지정된 파일 또는 폴더의 이름을 새로운 이름으로 바꾸는 기능 수행
+
+```c
+int remove(char const* _FileName);
+//성공적으로 삭제되면 0, 삭제되지 않으면 -1 반환
+
+int rename(char const *_OldFileName, char const * _NewFileName);
+//성공적으로 수정되면 0, 수정되지 않으면 0이 아닌 정수 반환
+```
