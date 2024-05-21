@@ -53,20 +53,22 @@ table > thead, table > tbody{
         width: 17rem !important;
     }
 }
-@font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 p, a, h1, h2, h3, li, ul, table{
     font-family: 'Pretendard-Regular';
     letter-spacing: -0.005rem;
     word-spacing: 0.05rem;
     line-height: 2rem;
-  }
-  
+}
+
+@font-face {
+font-family: 'omyu_pretty';
+src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+font-weight: normal;
+font-style: normal;
+}
+
 @font-face {
 font-family: 'Pretendard-Regular';
 src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -77,16 +79,21 @@ font-style: normal;
 
 h2.h1{
     border: none;
-    font-family: 'Pretendard-Regular' !important;
+    font-family: 'omyu_pretty' !important;
     //padding: 0 !important;
     //margin: 0 !important;
     font-size: 20px !important;
-    font-weight: 400 !important;
+    font-weight: 700 !important;
 }
-.sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item {
-    font-family: 'Pretendard-Regular' !important;
-    font-weight: 400 !important;
+.sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item{
+    font-family: 'omyu_pretty' !important;
+    font-weight: 700 !important;
     font-size: 15px !important;
+}
+.sidebar-about > p{
+    font-family: 'omyu_pretty' !important;
+    font-weight: 700 !important;
+    font-size: 17px !important;
 }
 .sidebar-about .avatar {
     margin-bottom: 1rem;
