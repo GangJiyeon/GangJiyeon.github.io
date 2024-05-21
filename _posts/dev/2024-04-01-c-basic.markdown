@@ -19,6 +19,22 @@ categories: dev develop
 ### **C언어 구조 알아보기**
 <img src="../../../assets/img/posting/image.png" align="center" width="400px">
 
+```c
+/* 전처리기(preprocessor instruction) : 컴파일하기 전에 처리한다
+문서(우리가 작성한 코드)가 컴파일러에게 들어가면 컴파일러가 문서를 분석
+분석 후 그에 맞는 프로그램을 만들어줌
+*/
+#define _CRT_SECURE_NO_WANINGS
+#include <stdio.h>
+
+/* main함수 */
+int main(void)//main 함수 정의 시작
+{//culry bracket, main scope start
+    int a, b, c;
+    return 0;
+}//main scope finish
+```
+
 <br>
 
 ### **문장과 블록**
