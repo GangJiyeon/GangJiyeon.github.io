@@ -21,17 +21,7 @@
 .sidebar-about {
   padding-bottom:10%;
 }
-/*
-.sidebar-bg{
-  background-image: none !important;
-  background-color: rgb(99 105 131) !important;
 
-}
-
-.sidebar-bg.sidebar-overlay::after {
-  background: none !important;
-}
-*/
 .spread-btn{
   left: 7%;
   position: absolute;
@@ -40,6 +30,8 @@
   background: none;
   color: #3e3100;
   cursor: pointer;
+  font-family: 'omyu_pretty';
+
 }
 
 .spread-btn:hover{
@@ -47,6 +39,8 @@
 }
 .sidebar a, .sidebar-about > p{
   color: #3e3100;
+  font-family: 'omyu_pretty';
+
 }
 
 .menu-wrapper{
@@ -85,6 +79,12 @@
   font-family: 'LINESeedKR-Bd';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'omyu_pretty';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
 }
 
