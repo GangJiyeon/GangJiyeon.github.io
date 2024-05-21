@@ -38,12 +38,15 @@
   padding: 0;
   border: none;
   background: none;
-  color: white;
+  color: #3e3100;
   cursor: pointer;
 }
 
 .spread-btn:hover{
   color: grey;
+}
+.sidebar a, .sidebar-about > p{
+  color: #3e3100;
 }
 
 .menu-wrapper{
