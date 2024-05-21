@@ -19,14 +19,29 @@ categories: dev develop
 ### **C언어 구조 알아보기**
 <img src="../../../assets/img/posting/image.png" align="center" width="400px">
 
+* 전처리
+    * `#` : 전처리 지시자 
+    * 전처리기(preprocessor instruction) : 컴파일 전, 문서(우리가 작성한 코드)를 분석해 그에 맞는 프로그램을 만들어줌
+  
 ```c
-/* 전처리기(preprocessor instruction) : 컴파일하기 전에 처리한다
-문서(우리가 작성한 코드)가 컴파일러에게 들어가면 컴파일러가 문서를 분석
-분석 후 그에 맞는 프로그램을 만들어줌
-*/
 #define _CRT_SECURE_NO_WANINGS
 #include <stdio.h>
+```
 
+* 외부선언 : 함수 및 자료형, 변수 선언
+
+```c
+typedet int my_int;
+void function(int, double);
+```
+
+* 함수 main : 기본 함수인 main()구현
+    * `/* 블록주석 */`
+    * `// 한줄주석`
+    * `문장;`, `블록{}`
+    * `함수호출`
+  
+```c
 /* main함수 */
 int main(void)//main 함수 정의 시작
 {//culry bracket, main scope start
@@ -34,6 +49,10 @@ int main(void)//main 함수 정의 시작
     return 0;
 }//main scope finish
 ```
+
+* 기타함수 구현 : 필요한 다른 함수 구현
+    * 지역변수 선언
+    * 매개변수 사용 
 
 <br>
 
