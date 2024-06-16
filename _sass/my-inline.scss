@@ -55,6 +55,11 @@ table > thead, table > tbody{
 }
 
 
+.sidebar-bg::after{
+    background: rgba(0, 0, 0, 0) !important;
+}
+
+
 p, a, h1, h2, h3, li, ul, table{
     font-family: 'Pretendard-Regular';
     letter-spacing: -0.005rem;
