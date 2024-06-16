@@ -15,14 +15,8 @@ redirect_from:
 <!--author-->
 <div class="last">
    <div><img src= "/assets/img/bgbg.jpg"></div>
-    <div><img src= "/assets/img/bgbg.jpg"></div>
 </div>
 
-  <script>
-    $(document).ready(function(){
-      $('.last').bxSlider();
-    });
-  </script>
 
 
 ## sns
@@ -30,21 +24,7 @@ redirect_from:
 * [깃허브 블로그](/public/CV.pdf)와 [인스타그램](/public/CV.pdf)에서 개발 정보를 공유하고 있습니다. 
 * 백준, codeleet
 
-<div class="grid_3">  
-  <a href="https://gangjiyeon.github.io/c-basic/">  
-    <img src="/assets/img/bgbg.jpg" align="center" >
-    <span>[C언어] 1. 구조, 문장과 블럭, 주석, 토큰</span>  
-  </a>
-  <a href="https://gangjiyeon.github.io/pointer/">  
-    <img src="/assets/img/bgbg.jpg" align="center" >
-    <span>[C언어] 12. 포인터(pointer) 기초</span>  
-  </a>
-  <a href="https://gangjiyeon.github.io/struct_union/">  
-    <img src="/assets/img/bgbg.jpg" align="center" >
-    <span>[C언어] 14. 구조체와 공용체</span>  
-  </a>
-</div>
-  
+
 
 ## education
 ---

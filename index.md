@@ -24,25 +24,20 @@ redirect_from:
 인기글 시리즈를 확인해보세요!
 
 <div class="grid_3">  
-  <a href="http://127.0.0.1:4000/dev/">  
+  <a href="https://gangjiyeon.github.io/c-basic/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
-    <div class="cos_border">
-    <span>안녕 인기글이 될 첫번째 글이야</span>  
-    </div>
+    <span>[C언어] 1. 구조, 문장과 블럭, 주석, 토큰</span>  
   </a>
-  <a href="http://127.0.0.1:4000/dev/">  
+  <a href="https://gangjiyeon.github.io/pointer/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
-    <div class="cos_border">
-    <span>안녕 인기글이 될 첫번째 글이야</span>  
-    </div>
+    <span>[C언어] 12. 포인터(pointer) 기초</span>  
   </a>
-  <a href="http://127.0.0.1:4000/dev/">  
+  <a href="https://gangjiyeon.github.io/struct_union/">  
     <img src="/assets/img/bgbg.jpg" align="center" >
-    <div class="cos_border">
-    <span>안녕 인기글이 될 첫번째 글이야</span>  
-    </div>
+    <span>[C언어] 14. 구조체와 공용체</span>  
   </a>
 </div>
+  
 
 
 ### popular category
