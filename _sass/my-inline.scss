@@ -81,7 +81,6 @@ font-style: normal;
 }
 
 
-@import url('//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 
 
 h2.h1{
@@ -115,3 +114,8 @@ h2.h1{
     //background-color: rgb(159, 169, 216, 0.5);
 }
 
+@import url('//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
+
+article{
+    font-family: 'Iropke Batang', serif;
+}
