@@ -6,7 +6,6 @@ h2{
     margin: 2rem 0rem 2rem 0rem;
     text-align: center;
 }
-
 h2 > strong{
     border-bottom: solid 3px rgb(80, 80, 80);
     padding-bottom: 10px !important;
@@ -25,6 +24,7 @@ table{
 table > thead, table > tbody{
     width: 100% !important;
 }
+
 @media screen and (min-width: 1664px){
     hy-drawer {
         width: calc(50% - 31rem);
@@ -37,8 +37,6 @@ table > thead, table > tbody{
         --hy-drawer-peek-width: 17rem !important;
     }
 }
-
-
 @media (min-width: 64em){
     body::before {
         width: 17rem !important;
@@ -58,19 +56,11 @@ p, a, h1, h2, h3, li, ul, table{
 }
 
 @font-face {
-font-family: 'omyu_pretty';
-src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
-font-weight: normal;
-font-style: normal;
-}
-
-@font-face {
 font-family: 'Pretendard-Regular';
 src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
 font-weight: 400;
 font-style: normal;
 }
-
 
 @font-face{
   font-family:'bitbit';
@@ -80,24 +70,18 @@ font-style: normal;
 
 h2.h1{
     border: none;
-    //font-family: 'omyu_pretty' !important;
     font-family:'bitbit';
-
     font-size: 20px !important;
-    //font-weight: 700 !important;
+    font-weight: 100 !important;
 }
 .sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item{
     font-family:'bitbit';
-
-    //font-family: 'omyu_pretty' !important;
-    //font-weight: 700 !important;
+    font-weight: 100 !important;
     font-size: 15px !important;
 }
 .sidebar-about > p{
     font-family:'bitbit';
-
-    //font-family: 'omyu_pretty' !important;
-    //font-weight: 700 !important;
+    font-weight: 100 !important;
     font-size: 17px !important;
 }
 .sidebar-about .avatar {
@@ -106,15 +90,12 @@ h2.h1{
 
 #breadcrumbs>ul{
     height: 2rem !important;
-    
 }
 #breadcrumbs>ul > a{
     border-radius: 5px !important;
-    //background-color: rgb(159, 169, 216, 0.5);
 }
 
 @import url('//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
-
 article *, aside *{
     font-family: 'Iropke Batang', serif;
 }
