@@ -113,7 +113,7 @@ remote_theme: hydecorp/hydejack@v9
 # Sidebar image and theme color of the site.
 #accent_image:          /assets/img/bgbg.jpg
 accent_image:          none
-accent_color:          rgb(255,232,165)
+accent_color:          rgb(0,46,75)
 
 favicon: /assets/img/favicon.ico
 apple_touch_icon: /assets/img/favicon.png
@@ -147,7 +147,7 @@ defaults:
       path:            hyde/
     values:
       accent_color:    rgb(38,139,210)
-      theme_color:     rgb(32,32,32)
+      theme_color:     rgb(255,255,255)
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false
