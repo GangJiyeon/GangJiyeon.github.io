@@ -86,6 +86,7 @@ font-style: normal;
 h2.h1{
     border: none;
     //font-family: 'omyu_pretty' !important;
+    font-family: 'Iropke Batang', serif;
     //padding: 0 !important;
     //margin: 0 !important;
     font-size: 20px !important;
@@ -93,11 +94,15 @@ h2.h1{
 }
 .sidebar-sticky, .menu-wrapper > a, .sidebar-nav-item{
     //font-family: 'omyu_pretty' !important;
+    font-family: 'Iropke Batang', serif;
+
     font-weight: 700 !important;
     font-size: 15px !important;
 }
 .sidebar-about > p{
     //font-family: 'omyu_pretty' !important;
+    font-family: 'Iropke Batang', serif;
+
     font-weight: 700 !important;
     font-size: 17px !important;
 }
@@ -116,6 +121,6 @@ h2.h1{
 
 @import url('//fastly.jsdelivr.net/font-iropke-batang/1.2/font-iropke-batang.css');
 
-article *{
+article *, aside *{
     font-family: 'Iropke Batang', serif;
 }
