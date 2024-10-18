@@ -38,7 +38,7 @@ categories: dev develop
 ### **문자열 자료형(string) 이란**
 * 연속된 문자열의 나열
 * 예시
-```
+```py
 "Life is too short, You need Python"
 "a"
 "123"
@@ -91,6 +91,7 @@ print(multiline3)
 <br>
 
 **4) 이스케이프 코드**
+
 |코드|설명|
 |:---:|---|
 |`\n`|문자열 안에서 줄을 바꿀 때 사용|
