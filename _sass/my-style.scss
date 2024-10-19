@@ -78,6 +78,12 @@
   font-style: normal;
 }
 
+@font-face {
+    font-family: 'intelone-mono-font-family-regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 
 a::after{
   display: none;
@@ -108,12 +114,13 @@ a::after{
 .grid_3 > a{
   border: solid 1px;
   border-radius: 10px;
+	text-align: center;
 }
 .grid_4 > a{
   border: solid 1px;
   border-radius: 20px;
   text-align: center;
-  padding: 20px;
+  padding: 20px 20px 15px 20px;
 }
 .grid_4 > a > span{
   margin: 5px 0px 0px 0px !important;
@@ -127,7 +134,7 @@ a::after{
 
 
 code{
-  font-family: 'LINESeedKR-Bd';
+  font-family: 'intelone-mono-font-family-regular';
   font-size: 0.9rem !important;
 	word-spacing: 5px;
   line-height: 1.5rem;
