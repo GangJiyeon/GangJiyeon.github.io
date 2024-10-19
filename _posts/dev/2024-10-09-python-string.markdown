@@ -181,6 +181,7 @@ print(a[:])    # result : Life is too short, You need Python
 <br>
 
 **1) 문자열 포맷 코드**
+
 |코드|설명|
 |:---:|:---:|
 |`%s`|문자열(String)|
@@ -232,7 +233,7 @@ print(I ate %s apples. so I was sick for %d days. % (num, day))
 
 <br>
 
-**2) 정렬 **
+**2) 정렬**
 * 오른쪽 정렬 : `default`
 * 왼쪽 정렬 : `-`
 
