@@ -143,6 +143,7 @@ print(len(a))  # result : 17
 ### **문자열 인덱싱과 슬라이싱**
 **1) 문자열 인덱싱과 슬라이싱이란**
 * 인덱싱(indexing) : 무엇인가를 가리킨다
+
 ```py
 a = "Life is too short, You need Python"
 
@@ -155,6 +156,7 @@ print(a[0])  # result : L, 앞에서 0번째 문자
 <br>
 
 * 슬라이싱(slicing) : 무엇인가를 잘라낸다
+
 ```py
 # 사용법
 # 문자열[시작:종료(미만)]
@@ -168,7 +170,6 @@ print(a[:17])  # result : Life is too short
 print(a[:]     # result : Life is too short, You need Python
 ```
 
-<br>
 
 
 <br>
