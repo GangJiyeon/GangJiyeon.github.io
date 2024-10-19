@@ -118,8 +118,6 @@ tail = "is fun"
 print(head + tail)  # result = python is fun
 ```
 
-<br>
-
 **2) 문자열 곱하기**
 ```py
 str = "hello boo~"
@@ -152,8 +150,6 @@ print(a[-1])  # result : n, 뒤에서 첫번째 문자
 print(a[-0])  # result : L, 뒤에서 0번째 문자
 print(a[0])  # result : L, 앞에서 0번째 문자
 ```
-
-<br>
 
 * 슬라이싱(slicing) : 무엇인가를 잘라낸다
 
@@ -250,10 +246,10 @@ a.count("b:")  # 2
 <br>
 
 **2) 위치 알려 주기 `find()` `index()`**
-* 문자열.find('문자(열)')
+* `문자열.find('문자(열)')`
   * 문자열에서 처음으로 해당 문자(열)가 나온 위치 반환
   * 찾는 문자(열)가 존재하지 않으면 -1 반환
-* 문자열.index('문자(열)')
+* `문자열.index('문자(열)')`
   * 문자열에서 처음으로 해당 문자(열)가 나온 위치 반환
   * 찾는 문자(열)가 존재하지 않으면 오류 발생
 
@@ -270,7 +266,7 @@ a.index('k')  # error
 <br>
 
 **3) 문자열 삽입 `join()`**
-* `"삽입문자".join('문자열") : 삽입문자를 문자열의 각 문자 사이에 삽입
+* `"삽입문자".join('문자열")` : 삽입문자를 문자열의 각 문자 사이에 삽입
 
 ```py
 ",".join('abcd')  # 'a,b,c,d'
@@ -323,7 +319,7 @@ a.replace("Life", "Your leg")  # 'Your leg is too short'
 <br>
 
 **6) 문자열 나누기 `split`**
-* `문자열.split('구분자')
+* `문자열.split('구분자')`
 * 구분자 기본 값 : 공백(space, tab, enter)
 * return 값 : 리스트
 
