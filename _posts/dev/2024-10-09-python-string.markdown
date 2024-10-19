@@ -167,7 +167,7 @@ a = "Life is too short, You need Python"
 print(a[0:4])  # result : Life
 print(a[19:])  # result : You need Python
 print(a[:17])  # result : Life is too short
-print(a[:]     # result : Life is too short, You need Python
+print(a[:])    # result : Life is too short, You need Python
 ```
 
 
