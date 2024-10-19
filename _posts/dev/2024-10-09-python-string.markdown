@@ -244,7 +244,7 @@ print(I ate %s apples. so I was sick for %d days. % (num, day))
 * `문자열.count('문자") : 문자열에 포함된 문자의 갯수 반환`
 ```py
 a = "hobby"
-a.count("b:)  # 2
+a.count("b:")  # 2
 ```
 
 <br>
