@@ -33,7 +33,6 @@ categories: dev develop
 
 ---
 
-
 ## **문자열 자료형**
 ### **문자열 자료형(string) 이란**
 * 연속된 문자열의 나열
@@ -170,12 +169,18 @@ print(a[:])    # result : Life is too short, You need Python
 
 <br>
 <br>
-
-### **문자열 포매팅**
-* 문자열 포매팅(stringi formatting) : 문자열 안에 어떤 값을 삽입하는 방법
-* `"%[정렬][공백][.소숫점]포맷코드" % 값`
 <br>
 
+---
+
+## **문자열 포매팅**
+### **문자열 포매팅이란**
+* 문자열 포매팅(stringi formatting) : 문자열 안에 어떤 값을 삽입하는 방법
+* `"%[정렬][자리수][.소수점 이하 자리수]포맷코드" % 값`
+<br>
+<br>
+
+### **문자열 포맷 방법**
 **1) 문자열 포맷 코드**
 
 |코드|설명|
@@ -219,8 +224,8 @@ print(d)  # I eat 3.14 apples.
 
 <br>
 
-* 여러 값 넣기
 ```py
+# 여러 값 넣기
 num = "ten"
 day = 3
 print(I ate %s apples. so I was sick for %d days. % (num, day))
@@ -233,8 +238,69 @@ print(I ate %s apples. so I was sick for %d days. % (num, day))
 * 오른쪽 정렬 : `default`
 * 왼쪽 정렬 : `-`
 
-### **문자 관련 함수들**
+<br>
+
+**3) 자리수**
+* default : 글자수
+* 자리수 > 글자수 : 공백으로 채운다
+
+<br>
+
+**4) 소수점**
+* `.숫자` : 소수점 이하 자리 수, 반올림 해 나타냄
+* `0.숫자` : 길이에 상관하지 않겠다는 의미, 0 생략 가능
+
+<br>
+<br>
+
+### **format 함수를 사용한 포매팅**
+**1) format 함수 사용하기**
+
+```py
+num = 10
+day = "five"
+a = "I ate {0} apples, so I was sick for {1} days.".format(num, day)
+b = "I ate {num} apples, so I was sick for {day} days.".format(num, day)
+c = "I ate {0} apples, so I was sick for {day} days.".format(num, day)
+```
+
+<br>
+
+**2) format 함수의 정렬, 공백, 소수점 표현**
+* `{인덱스[:][공백문자][정렬][자리수][.소수점이하자리수f]`
+ * 왼쪽 정렬 : `{인덱스:<자리수}`
+ * 오른쪽 정렬 : `{인덱스:>자리수}`
+ * 가운데 정렬 : `{인덱스:^자리수}`
+
+<br>
+<br>
+
+### **f 문자열 포매팅**
+* 파이썬 3.6 버전부터 사용가능
+* 문자열 앞에 `f 접두사`를 붙임
+* 표현식(중괄호 안의 변수를 계산식과 함께 사용하는 것) 지원
+* format 함수와 동일한 방식으로 공백, 자리수, 소수점을 표현
+* `{}` 표현 시 `{{}}`
+
+```py
+name = "John"
+age = 30
+
+print(f'My name is {name}, and I am years old {age}.')
+print(f'I am {age + 1} years old next year')
+# result : My name is John, and I am years old 30.
+```
+
+<br>
+<br>
+<br>
+
+---
+
+## **문자 관련 함수들**
 > 값을 바꾸어 리턴할 뿐, 실제 문자열이 바뀌지는 않는다
+
+<br>
 
 **1) 문자 개수 세기 `count()`**
 * `문자열.count('문자") : 문자열에 포함된 문자의 갯수 반환`
