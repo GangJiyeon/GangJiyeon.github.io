@@ -50,27 +50,15 @@ table > thead, table > tbody{
 
 
 p, a, h1, h2, h3, li, ul, table{
-    font-family: 'Pretendard-Regular';
+    font-family: 'NanumSquareRound';
     letter-spacing: -0.005rem;
     word-spacing: 0.05rem;
 }
 
-@font-face {
-    font-family: 'Freesentation-9Black';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'NanumSquareRound';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'HakgyoansimWoojuR';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
