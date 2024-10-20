@@ -90,11 +90,12 @@ print(a[1])	# 'b'
 <br>
 
 ## **딕셔너리 관련 함수**
- ### **key 리스트를 만드는 `keys()`**
- **1) `keys()` 사용하기** 
- * `딕셔너리명.keys()` : 해당 딕셔너리의 키 값만 모아  `dict_keys 객체` 반환
 
- ```py
+### **key 리스트를 만드는 `keys()`**
+**1) `keys()` 사용하기** 
+* `딕셔너리명.keys()` : 해당 딕셔너리의 키 값만 모아  `dict_keys 객체` 반환
+
+```py
 a = {'name': 'pey', 'phone': '010-9999-1234', 'birth': '1118'}
 print(a.keys())	# dict_keys(['name', 'phone', 'birth'])
 ```
