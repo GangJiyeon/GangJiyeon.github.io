@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[python] 4. 자료형 - 딕셔너리"
+title:  "[python] 5. 자료형 - 딕셔너리"
 date:   2024-10-12 00:00:00 +0900
 categories: dev develop
 ---
