@@ -74,9 +74,10 @@
 
 
 @font-face {
-    font-family: 'MaruBuri';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2) format("woff2"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.ttf) format("truetype");
+    font-family: 'ChosunGu';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 a::after{
   display: none;
@@ -127,11 +128,11 @@ a::after{
 
 
 code{
-	font-family: 'MaruBuri';
+	font-family: 'ChosunGu';
 	font-size: 0.9rem !important;
 	word-spacing: 5px;
 	line-height: 1.5rem;
-	letter-spacing: 1px;
+	letter-spacing: 1.3px;
 }
 .gradation{
 	background: linear-gradient(to right, #A7A3FF,#FFA7A3, #671cc4, #5673bd) !important; 
