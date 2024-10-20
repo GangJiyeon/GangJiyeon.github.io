@@ -71,19 +71,8 @@
       url('https://cdn.jsdelivr.net/gh/webfontworld/tmoney/TmoneyRoundWind-Regular.ttf') format("truetype");
   font-display: swap;
 }
-@font-face {
-  font-family: 'LINESeedKR-Bd';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-}
 
-@font-face {
-    font-family: 'intelone-mono-font-family-regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/intelone-mono-font-family-regular.woff2') format('woff2');
-    font-weight: 400;
-    font-style: normal;
-}
+
 @font-face {
     font-family: 'MaruBuri';
     src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
@@ -138,10 +127,11 @@ a::after{
 
 
 code{
-  font-family: 'MaruBuri';
-  font-size: 0.9rem !important;
+	font-family: 'MaruBuri';
+	font-size: 0.9rem !important;
 	word-spacing: 5px;
-  line-height: 1.5rem;
+	line-height: 1.5rem;
+	letter-spacing: 1px;
 }
 .gradation{
 	background: linear-gradient(to right, #A7A3FF,#FFA7A3, #671cc4, #5673bd) !important; 
