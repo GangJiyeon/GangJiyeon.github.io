@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[python] 7. 자료형 - 불"
-date:   2024-10-11 00:00:00 +0900
+date:   2024-10-14 00:00:00 +0900
 categories: dev develop
 ---
 이번에는 파이썬의 불 자료형에 대해 알아보자
