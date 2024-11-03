@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[python] 10. 파이썬 함수"
+title:  "[python] 11. 파이썬 함수"
 date:   2024-10-18 00:00:00 +0900
 categories: dev develop
 ---
