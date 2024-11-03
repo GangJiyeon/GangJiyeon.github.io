@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[python] 12. 파이썬 파일 읽고 쓰기"
+title:  "[python] 13. 파이썬 파일 읽고 쓰기"
 date:   2024-10-20 00:00:00 +0900
 categories: dev develop
 ---
