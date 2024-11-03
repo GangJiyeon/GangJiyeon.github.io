@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "[python] 10. 파이썬 함수"
-date:   2024-10-16 00:00:00 +0900
+date:   2024-10-18 00:00:00 +0900
 categories: dev develop
 ---
 이번에는 파이썬의 함수 대해 알아보자
