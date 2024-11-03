@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "[python] 11. 파이썬 입출력"
-date:   2024-10-18 00:00:00 +0900
+title:  "[python] 12. 파이썬 입출력"
+date:   2024-10-19 00:00:00 +0900
 categories: dev develop
 ---
 이번에는 파이썬의 입출력(print, input)에 대해 알아보자
