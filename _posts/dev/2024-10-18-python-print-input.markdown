@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "[python] 10. 파이썬 제어문(if, while, for)"
-date:   2024-10-17 00:00:00 +0900
+title:  "[python] 11. 파이썬 입출력"
+date:   2024-10-18 00:00:00 +0900
 categories: dev develop
 ---
-이번에는 파이썬의 제어문(if, while, for문)에 대해 알아보자
+이번에는 파이썬의 입출력(print, input)에 대해 알아보자
 
 * toc
 {:toc}
