@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[python] 11. 파이썬 제어문(if, while, for)"
+title:  "[python] 10. 파이썬 제어문(if, while, for)"
 date:   2024-10-17 00:00:00 +0900
 categories: dev develop
 ---
