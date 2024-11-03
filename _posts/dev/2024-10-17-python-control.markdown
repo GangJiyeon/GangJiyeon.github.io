@@ -267,7 +267,7 @@ print(total)	# 55
 **1) 리스트 컴프리헨션(list comprehension)이란**
 * 리스트 안에 for문을 포함하는 것
 
-```
+```py
 # 리스트의 각 항목에 3을 곱해 리스트에 담기
 a = [1, 2, 3, 4]
 result = [num * 3 for num in a]
